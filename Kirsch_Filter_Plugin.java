@@ -1,4 +1,4 @@
-import util.KirschCollector;
+import util.neighbourhood.collector.KirschCollector;
 import ij.ImagePlus;
 import ij.plugin.filter.PlugInFilter;
 import ij.process.ImageProcessor;

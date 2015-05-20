@@ -1,4 +1,4 @@
-import util.DiagonalCollector;
+import util.neighbourhood.collector.DiagonalCollector;
 import ij.ImagePlus;
 import ij.plugin.filter.PlugInFilter;
 import ij.process.ImageProcessor;

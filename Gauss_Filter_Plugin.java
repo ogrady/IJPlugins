@@ -1,4 +1,4 @@
-import util.GaussCollector;
+import util.neighbourhood.collector.GaussCollector;
 import ij.ImagePlus;
 import ij.plugin.filter.PlugInFilter;
 import ij.process.ImageProcessor;

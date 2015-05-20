@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import util.neighbourhood.collector.NeighbourCollector;
 import ij.process.ImageProcessor;
 
 

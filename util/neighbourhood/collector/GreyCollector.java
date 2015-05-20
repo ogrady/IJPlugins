@@ -1,9 +1,11 @@
-package util;
+package util.neighbourhood.collector;
 
 import ij.process.ImageProcessor;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import util.Util;
 
 /**
  * Yields a list of greyscale-value of the neighbours
@@ -14,7 +16,7 @@ public class GreyCollector extends NeighbourCollector<List<Integer>> {
 	private List<Integer> result;
 
 	@Override
-	public void init(int nsize) {
+	public void initResultSet(int nsize) {
 		result = new ArrayList<Integer>(2*nsize+1);
 	}
 

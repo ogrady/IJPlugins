@@ -1,4 +1,4 @@
-package util;
+package util.neighbourhood.collector;
 
 import ij.process.ImageProcessor;
 

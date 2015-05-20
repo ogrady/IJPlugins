@@ -1,4 +1,4 @@
-package util;
+package util.neighbourhood.collector;
 
 import ij.process.ImageProcessor;
 
@@ -8,21 +8,21 @@ import ij.process.ImageProcessor;
  * 
  * @author Antonio Rajic, Daniel
  */
-public class GaussCollector extends GreyCollector {
+public class KirschCollector extends GreyCollector {
 	private int[][] matrix;
 	
-	public GaussCollector(int[][] m) {
+	public KirschCollector(int[][] m) {
 		matrix = m;
 	}
 
 	@Override
 	public void putPixel(ImageProcessor ip, int x, int y) {
-		float sum = 0;
+		int sum = 0;
 		for(int i = 0; i < matrix.length; i++) {
 			for(int j = 0; j < matrix[i].length; j++) {
-				sum += matrix[i][j] * getResultSet().remove(0) * 0.0625;
+				sum += matrix[i][j] * getResultSet().remove(0);
 			}
 		}
-		ip.putPixel(x, y, (int)sum);
+		ip.putPixel(x, y, sum / matrix.length*matrix[0].length);
 	}
 }

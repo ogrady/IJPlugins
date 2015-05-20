@@ -1,4 +1,4 @@
-import util.RGBCollector;
+import util.neighbourhood.collector.RGBCollector;
 import ij.ImagePlus;
 import ij.plugin.filter.PlugInFilter;
 import ij.process.ImageProcessor;
