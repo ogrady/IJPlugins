@@ -4,11 +4,31 @@ import java.util.Collections;
 import java.util.List;
 
 import util.neighbourhood.collector.NeighbourCollector;
+import ij.IJ;
+import ij.ImagePlus;
 import ij.process.ImageProcessor;
 
 
 public class Util {
 	private static final int DEFAULT_NEIGHBOUR = 0;
+	
+	/**
+	 * Creates a new image from an input image, where the new image is greyscaled and the grey-value is calculated as the mean of the RGB-values of the original image.
+	 * @param input original image
+	 * @return grey-scale-image
+	 */
+	public static ImagePlus toGreyScale(ImageProcessor input) {
+		ImagePlus grey = IJ.createImage("greyscale", "8-bit", input.getWidth(), input.getHeight(), 1);
+		for(int i = 0; i < grey.getWidth(); i++) {
+			for(int j = 0; j < grey.getHeight(); j++) {
+				int[] rgb = new int[3];
+				input.getPixel(i, j, rgb);
+				int p = (rgb[0] + rgb[1] + rgb[2])/3;
+				grey.getProcessor().putPixel(i, j, p);
+			}
+		}
+		return grey;
+	}
 	
 
 	/**
