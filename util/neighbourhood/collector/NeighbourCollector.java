@@ -96,11 +96,17 @@ abstract public class NeighbourCollector<T> {
 	abstract public void initResultSet(int nsize);
 
 	/**
-	 * Puts the collected results into a pixel
-	 * @param ip imageprocessor to put the pixel into. Should be a copy of the original ip,
-	 * 		as manipulating the original would probably result in unwanted behaviour
-	 * @param x x-coordinate where we want to put the pixel
-	 * @param y y-coordinate where we want to put the pixel
+	 * Puts the collected results into a pixel. Is called for each pixel of the
+	 * original image.
+	 *
+	 * @param ip
+	 *            imageprocessor to put the pixel into. Should be a copy of the
+	 *            original ip, as manipulating the original would probably
+	 *            result in unwanted behaviour
+	 * @param x
+	 *            x-coordinate where we want to put the pixel
+	 * @param y
+	 *            y-coordinate where we want to put the pixel
 	 */
 	abstract public void putPixel(ImageProcessor ip, int x, int y);
 

@@ -29,18 +29,21 @@ public class GaussianPyramide {
 			}
 		}
 		return result;
+		/*final GaussianPyramideExpander gpe = new GaussianPyramideExpander();
+		gpe.apply(original.getProcessor(), 2);
+		return gpe.getResultImage();*/
 	}
 
 	/**
 	 * Reduces the image via {@link GaussianPyramide}
 	 *
-	 * @param img
+	 * @param original
 	 *            image to reduce
 	 * @return image of half the size of the original
 	 */
-	public static ImagePlus reduce(final ImagePlus img) {
-		final GaussianPyramideCollector gpc = new GaussianPyramideCollector();
-		gpc.apply(img.getProcessor(), 2);
+	public static ImagePlus reduce(final ImagePlus original) {
+		final GaussianPyramideReducer gpc = new GaussianPyramideReducer();
+		gpc.apply(original.getProcessor(), 2);
 		return gpc.getResultImage();
 	}
 }

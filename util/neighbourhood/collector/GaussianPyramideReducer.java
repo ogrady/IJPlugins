@@ -8,7 +8,13 @@ import java.util.List;
 
 import util.neighbourhood.generator.XNeighbourhoodGenerator;
 
-public class GaussianPyramideCollector extends GreyCollector {
+/**
+ * Sheet 5, Ex 1
+ *
+ * @author Antonio Rajic, Hien Nguyen, Daniel O'Grady
+ *
+ */
+public class GaussianPyramideReducer extends GreyCollector {
 	private static int[] matrix = { 1, 4, 6, 4, 1 };
 	private ImagePlus resultImage;
 
@@ -23,7 +29,7 @@ public class GaussianPyramideCollector extends GreyCollector {
 				ip.getHeight() / 2, 1);
 	}
 
-	public GaussianPyramideCollector() {
+	public GaussianPyramideReducer() {
 		super();
 		// we don't need y-neighbours for this
 		setNeighbourhoodGenerator(new XNeighbourhoodGenerator());
