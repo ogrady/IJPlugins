@@ -6,9 +6,10 @@ So they might not fit your purpose, but you are welcome to see them as examples 
 
 ## Prerequisites
 At the time of writing this guide, I've been using 
-ImageJ 1.48
-Java 1.8.0_45
-Eclipse Kepler Release (Build id: 20130614-0229)
+
+- ImageJ 1.48
+- Java 1.8.0_45
+- Eclipse Kepler Release (Build id: 20130614-0229)
  
 ## Setup
 This is merely a recommended quick-start guide I found useful for working with ImageJ and eclipse. There might be better solutions. 
