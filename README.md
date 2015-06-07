@@ -14,6 +14,7 @@ Eclipse Kepler Release (Build id: 20130614-0229)
 This is merely a recommended quick-start guide I found useful for working with ImageJ and eclipse. There might be better solutions. 
 
 (0. download ImageJ from http://imagej.nih.gov/ij/ and install it on your computer)
+
 1. fire up eclipse and set up a worksspace that points to `imagej_installation_directory/plugins`
 2. make sure you have opened your git-view from `Window -> Show View -> Other... -> Git -> Git Repositories`. If you don't have it installed, you can download the eGit-plugin from http://www.eclipse.org/egit/
 3. in the git-view, clone this repository by entering the URL to the github-repository and following the wizard. When eclipse asks you for the Local Destination, choose `imagej_installation_directory/plugins/OgrPlugins`
