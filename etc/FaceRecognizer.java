@@ -11,11 +11,30 @@ import java.util.LinkedList;
 
 import util.facerecognition.DTW;
 
+/**
+ * 
+ * @author Antonio Rajic, Daniel O'Grady
+ *
+ */
 public class FaceRecognizer {
+	public static final String HINT = "call width valid paths: directory/to/subjects directory/to/templates directory/for/output";
 	public static void main(final String[] args) {
-		final String subjectpath = "C:/Users/Daniel/Desktop/faces/subjects";
-		final String templatepath = "C:/Users/Daniel/Desktop/faces/templates";
-		final String outputpath = "C:/Users/Daniel/Desktop/faces/output/";
+		if(args.length < 3) {
+			System.err.println(HINT);
+			System.exit(1);
+		}
+		final String subjectpath = args[0];
+		final String templatepath = args[1];
+		final String outputpath = args[2];
+		
+		
+		for(String d : new String[]{subjectpath,templatepath,outputpath}) {
+			File f = new File(d);
+			if(!f.exists() || !f.isDirectory()) {
+				System.err.println(HINT);
+				System.exit(1);	
+			}
+		}
 		final boolean output = true;
 		final File[] subjects = new File(subjectpath).listFiles();
 		final File[] templates = new File(templatepath).listFiles();

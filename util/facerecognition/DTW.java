@@ -10,6 +10,7 @@ import java.awt.Point;
  *
  */
 public class DTW {
+	public static final int NOISE = 10;
 	/**
 	 * Distance between two lists
 	 *
@@ -56,7 +57,7 @@ public class DTW {
 	 */
 	public static int d(final int x, final int y, final Mistogram t, final Mistogram b) {
 		return (int) (Math.floor(Math.sqrt(Math.pow(
-				t.getDistribution()[x] - b.getDistribution()[y], 2)) / 10) * 10);
+				t.getDistribution()[x] - b.getDistribution()[y], 2)) / NOISE) * NOISE);
 	}
 
 	public static Point findMatch(final ImageProcessor ip, final ImageProcessor template) {
